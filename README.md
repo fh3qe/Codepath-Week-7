@@ -7,4 +7,4 @@
 	- Type of Vulnerability: XSS
 	- Sourcecode/walkthrough: https://klikki.fi/adv/wordpress2.html
 - GIF:
-		<img src="XSS - Unauthenticated Stored XSS.gif"/>
+		<img src="my_gif_walkthrough_url" width="800">
