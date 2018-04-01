@@ -17,7 +17,7 @@ Time spent: **X** hours spent in total
   	- Create a comment on website with a string following the format: 
 
 					<a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a>
-1. (Required) Wordpress 4.0-4.7.2 Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
+2. (Required) Wordpress 4.0-4.7.2 Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
   - [x] Summary: 
     - Vulnerability types: XSS
     - Tested in version: 4.2
@@ -27,38 +27,26 @@ Time spent: **X** hours spent in total
   - [x] Steps to recreate: 
   	- Edit a post to contain the following string:
 
-  				[embed src='https://youtube.com/embed/123\x3csvg onload=alert(1)\x3e'][/embed]
-1. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Optional) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Optional) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php) 
+  					[embed src='https://youtube.com/embed/123\x3csvg onload=alert(1)\x3e'][/embed]
+3. (Required) Wordpress 3.3-4.7.4 Large File Upload Error XSS
+  - [X] Summary: 
+    - Vulnerability types: XSS
+    - Tested in version: 4.2
+    - Fixed in version: 4.2.15
+  - [X] GIF Walkthrough: 
+  	- <img src="XSS - Large File Upload Error XSS.gif" width="800">
+  - [X] Steps to recreate: 
+  	- Create a 20MB file that has XSS code in its name. For example:
+
+  					BadFile<img src=x onerror=alert(1)>.png
+  	- Upload the file at the wp-admin/media-new.php endpoint. An error will say it exceeded filesize but the javascript payload will execute. 
 
 ## Assets
 
-List any additional assets, such as scripts or files
+- Sources used for vulnerabilities:
+	- 1: https://klikki.fi/adv/wordpress2.html
+	- 2: https://blog.sucuri.net/2017/03/stored-xss-in-wordpress-core.html
+	- 3: https://hackerone.com/reports/203515
 
 ## Resources
 
