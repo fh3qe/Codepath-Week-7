@@ -1,8 +1,8 @@
 # Project 7 - WordPress Pentesting
 
-Time spent: **X** hours spent in total
+Time spent: **2** hours spent in total
 
-> Objective: Find, analyze, recreate, and document **five vulnerabilities** affecting an old version of WordPress
+> Objective: Find, analyze, recreate, and document **three vulnerabilities** affecting an old version of WordPress
 
 ## Pentesting Report
 
@@ -57,7 +57,7 @@ GIFs created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while doing the work
+Initially had trouble working with getting the WPDistillery working. Ended up having to do vulnerability exploits using my Kali VM because it wouldn't display on my host browser. I suspect it has something to do with my firewall settings and configurations of private vs. public networks but I didn't want to spend too much time fooling around with settings. 
 
 ## License
 
