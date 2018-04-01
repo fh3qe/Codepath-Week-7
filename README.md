@@ -17,6 +17,8 @@ Time spent: **2** hours spent in total
   	- Create a comment on website with a string following the format: 
 
 					<a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  AAAAAAAAAAAA...[64 kb]..AAA'></a>
+  - [x] Affected Sourcecode:
+  	- Not specified, see Assets section below for link to reported vulnerability source.
 2. (Required) Wordpress 4.0-4.7.2 Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
   - [x] Summary: 
     - Vulnerability types: XSS
@@ -28,6 +30,8 @@ Time spent: **2** hours spent in total
   	- Edit a post to contain the following string:
 
   					[embed src='https://youtube.com/embed/123\x3csvg onload=alert(1)\x3e'][/embed]
+  - [x] Affected Sourcecode:
+  	- https://github.com/WordPress/WordPress/commit/419c8d97ce8df7d5004ee0b566bc5e095f0a6ca8
 3. (Required) Wordpress 3.3-4.7.4 Large File Upload Error XSS
   - [X] Summary: 
     - Vulnerability types: XSS
@@ -40,7 +44,9 @@ Time spent: **2** hours spent in total
 
   					BadFile<img src=x onerror=alert(1)>.png
   	- Upload the file at the wp-admin/media-new.php endpoint. An error will say it exceeded filesize but the javascript payload will execute. 
-
+   - [x] Affected Sourcecode:
+  	- https://github.com/WordPress/WordPress/commit/8c7ea71edbbffca5d9766b7bea7c7f3722ffafa6
+  	
 ## Assets
 
 - Sources used for vulnerabilities:
